@@ -1,6 +1,6 @@
 # Bongo Cat Auto Typer
 
-A fun and user-friendly automatic typing application featuring a Bongo Cat theme. This tool simulates pressing the F13 key at configurable intervals to automate repetitive keyboard tasks.
+A fun and user-friendly automatic typing application designed specifically for the [Bongo Cat game on Steam](https://store.steampowered.com/app/3419430/Bongo_Cat/?l=schinese&curator_clanid=33923354). This tool simulates pressing the F13 key at configurable intervals to help earn points in the game automatically.
 
 ## Features
 
@@ -14,17 +14,21 @@ A fun and user-friendly automatic typing application featuring a Bongo Cat theme
 - Start and stop controls
 - Warning about F13 macro conflicts
 
+## Purpose
+
+This application is specifically designed to help players of the Bongo Cat Steam game earn points automatically by simulating repeated F13 key presses. The game involves rhythm-based gameplay where pressing F13 repeatedly earns points, and this tool helps automate that process.
+
 ## Requirements
 
 - Windows OS (since F13 key support is needed)
-- Python 3.6+
+- Python 3.6+ (for running the source code)
 
 ## Installation
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/bongo-cat-auto-typer.git
-   cd bongo-cat-auto-typer
+   git clone https://github.com/YuanManfei/bongo_cat_points_sim.git
+   cd bongo_cat_points_sim
    ```
 
 2. Install the required dependencies:
@@ -34,7 +38,11 @@ A fun and user-friendly automatic typing application featuring a Bongo Cat theme
 
 ## Usage
 
-### Running the Application
+### Direct Download (Recommended)
+
+The easiest way to use this application is to download the pre-built executable directly from the releases section. The .exe file can be downloaded and run directly without installing Python or any dependencies.
+
+### Running the Application from Source
 
 To run the application directly with Python:
 ```
@@ -43,7 +51,7 @@ python auto_click_gui.py
 
 ### Building the Executable
 
-To build a standalone executable:
+To build a standalone executable yourself:
 ```
 pyinstaller build.spec
 ```
@@ -68,23 +76,16 @@ The executable will be created in the `dist/` folder as `BongoCat_AutoTyper.exe`
 
 The application relies on the following Python packages:
 - `pynput==1.7.6` - For simulating keyboard inputs
-- `PIL (Pillow)` - For image processing
+- `Pillow==9.5.0` - For image processing
 - `tkinter` - For the GUI (built-in with Python)
 
 ## How It Works
 
-The application creates a graphical interface that allows users to configure how many times to simulate pressing the F13 key and at what intervals. When started, it uses the pynput library to programmatically press and release the F13 key according to the user's settings.
+The application creates a graphical interface that allows users to configure how many times to simulate pressing the F13 key and at what intervals. When started, it uses the pynput library to programmatically press and release the F13 key according to the user's settings, helping to earn points in the Bongo Cat Steam game automatically.
 
 ## Important Notes
 
 - This application is designed specifically for Windows systems that support the F13 key
 - Make sure to avoid using F13 as a macro while running this application
 - The program simulates keyboard input, which may trigger other applications or macros
-
-## Contributing
-
-Feel free to submit issues and enhancement requests. Pull requests are welcome!
-
-## License
-
-[Specify your license here]
+- This tool is intended for use with the Bongo Cat Steam game to help automate point earning
